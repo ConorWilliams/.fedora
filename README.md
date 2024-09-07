@@ -152,10 +152,22 @@ dnf check-update
 sudo dnf install code 
 ```
 
+### Slack
+
+Use snap
+
 ### Obsidian
+
+Use snap
 
 ### Email
 
+```sh
+sudo dnf install thunderbird
+```
+
 ### Onedrive
 
-pass
+```sh
+sudo dnf install onedrive
+```
