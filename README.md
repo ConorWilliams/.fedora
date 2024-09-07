@@ -18,6 +18,33 @@ chsh -s /usr/bin/fish
 
 ### Fixing trackpad on sway
 
+
+In the terminal type `swaymsg -t get_inputs`:
+
+```
+Input device: <Device-ID>
+Touchpad  Type: Touchpad  
+Identifier: <Copy This Identifier> 
+Product ID: 4639  
+Vendor ID: 1160  
+Libinput Send Events: enabled
+```
+
+Use that Identifier for type touchpad in sway/config file.
+
+Like,
+
+```
+input "<Identifier>" {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+}
+```
+
+After doing this I found just using "type:touchpad" did the trick on my laptop.
+
+
 ### Github keys
 
 Make a key on githuhub and install locally, enable agent in fish:
