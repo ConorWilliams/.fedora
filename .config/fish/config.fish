@@ -3,3 +3,5 @@ if status is-interactive
 end
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+eval (ssh-agent -c) && ssh-add ~/.ssh/github

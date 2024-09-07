@@ -7,7 +7,7 @@ This is my config for Fedora (40) - sway spin
 ### Core installs
 
 ```sh
-sudo dnf install vim fish git
+sudo dnf install vim fish git ranger arandr kitty cascadia-fonts-all
 ```
 
 Set fish as the default shell:
