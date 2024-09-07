@@ -61,10 +61,15 @@ output * bg /usr/share/backgrounds/default.png fill
 ### Input configuration
 
 input "type:touchpad" {
-    dwt enabled
-    tap enabled
-    natural_scroll enabled
-    middle_emulation enabled
+  accel_profile adaptive
+  click_method clickfinger
+  drag enabled
+  dwt enabled
+  events disabled_on_external_mouse
+  middle_emulation enabled
+  pointer_accel 0.2
+  scroll_method two_finger
+  tap enabled
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs

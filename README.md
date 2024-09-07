@@ -123,6 +123,20 @@ From [tutorial](https://docs.fedoraproject.org/en-US/quick-docs/installing-chrom
 2. sudo dnf config-manager --set-enabled google-chrome
 3. sudo dnf install google-chrome-stable
 
+### Code
+
+From the vscode website:
+
+```sh
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+```
+
+```sh
+dnf check-update
+sudo dnf install code 
+```
+
 
 ### Obsidian
 ### Email
