@@ -4,4 +4,12 @@ end
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-eval (ssh-agent -c) && ssh-add ~/.ssh/github
+# Setup an agent
+eval (ssh-agent -c) >/dev/null 
+
+# Add other keys here
+ssh-add ~/.ssh/github &>/dev/null
+
+# Disable the greeting
+function fish_greeting
+end
