@@ -7,7 +7,7 @@ This is my config for Fedora (40) - sway spin
 ### Core installs
 
 ```sh
-sudo dnf install vim fish git ranger arandr kitty cascadia-fonts-all
+sudo dnf install vim fish git ranger arandr kitty cascadia-fonts-all htop
 ```
 
 Set fish as the default shell:
@@ -100,3 +100,4 @@ From [tutorial](https://docs.fedoraproject.org/en-US/quick-docs/installing-chrom
 ### Obsidian
 ### Email
 ### Onedrive
+### Code
