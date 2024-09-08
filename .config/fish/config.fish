@@ -2,7 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Working with dots
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# For CMake
+set -gx VCPKG_ROOT ~/vcpkg
 
 # Setup an agent
 eval (ssh-agent -c) >/dev/null 
