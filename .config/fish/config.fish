@@ -2,14 +2,22 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Check first
+fish_add_path -m ~/.local/bin
+
 # Working with dots
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# For screenshots, needs grim and slurp
+function sshot
+    command grim -g "$(slurp)" $argv
+end
 
 # For CMake
 set -gx VCPKG_ROOT ~/vcpkg
 
 # Setup an agent
-eval (ssh-agent -c) >/dev/null 
+eval (ssh-agent -c) >/dev/null
 
 # Add other keys here
 ssh-add ~/.ssh/github &>/dev/null
@@ -30,3 +38,5 @@ function fish_prompt
     string join '' -- (set_color green) (prompt_pwd) (set_color normal) (fish_git_prompt) ' $ ' $stat
 end
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
