@@ -7,7 +7,7 @@ This is my config for Fedora (40) - sway spin
 ### Core installs
 
 ```sh
-sudo dnf install vim fish git ranger arandr kitty cascadia-fonts-all htop
+sudo dnf install vim fish git ranger arandr kitty cascadia-fonts-all htop git-delta
 ```
 
 Set fish as the default shell:
@@ -43,9 +43,9 @@ input "<Identifier>" {
 
 After doing this I found just using "type:touchpad" did the trick on my laptop.
 
-### Github keys
+### GitHub keys
 
-Make a key on githuhub and install locally, enable agent in fish:
+Make a key on GitHub and install locally, enable agent in fish:
 
 ```sh
 eval (ssh-agent -c) && ssh-add ~/.ssh/github
@@ -171,3 +171,11 @@ sudo dnf install thunderbird
 ```sh
 sudo dnf install onedrive
 ```
+
+### Neovim
+
+Installed via brew, some post hock notes:
+
+- Additional extras: `fd, node/npm, ripgrep, fzf`.
+- Lazyvim, just follow the tutorial on the site.
+- Check the extras!
