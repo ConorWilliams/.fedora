@@ -1,19 +1,18 @@
 [user]
-	email = conorwilliams@outlook.com
-	name = conor williams
-
+    email = conorwilliams@outlook.com
+    name = conor williams
 [rerere]
-	enabled = true
-
+    enabled = true
+    autoUpdate = true
 [core]
     pager = delta
-
+    editor = nvim
+[init]
+    defaultBranch = main
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true  # use n and N to move between diff sections
     dark = true      # or light = true, or omit for auto-detection
-
 [merge]
     conflictstyle = zdiff3
