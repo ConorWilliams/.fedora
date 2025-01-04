@@ -179,3 +179,17 @@ Installed via brew, some post hock notes:
 - Additional extras: `fd, node/npm, ripgrep, fzf`.
 - Lazyvim, just follow the tutorial on the site.
 - Check the extras!
+
+### Non-free media codecs
+
+Check [this](https://rpmfusion.org/Configuration#Command_Line_Setup_using_rpm) site for the latest instructions. I did:
+
+```sh
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+Then swap to full-fat ffmpeg:
+
+```sh
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+```
