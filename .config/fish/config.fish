@@ -13,6 +13,11 @@ function sshot
     command grim -g "$(slurp)" $argv
 end
 
+# Alias
+alias vi nvim
+alias vim nvim
+alias ls 'eza --icons'
+
 # For CMake
 set -gx VCPKG_ROOT ~/vcpkg
 
